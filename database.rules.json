@@ -1,0 +1,117 @@
+{
+ "rules": {
+  "teachers": {
+   ".read": true,
+   "$id": {
+    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || (!data.exists() && newData.child('approved').val() === false)"
+   }
+  },
+  "sessions": {
+   ".read": true,
+   ".write": true
+  },
+  "students": {
+   ".read": true,
+   ".write": true
+  },
+  "files": {
+   ".read": true,
+   ".write": true
+  },
+  "online": {
+   ".read": true,
+   ".write": true
+  },
+  "attendance": {
+   ".read": true,
+   ".write": true
+  },
+  "payments": {
+   ".read": true,
+   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+  },
+  "settings": {
+   ".read": true,
+   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+  },
+  "adunits": {
+   ".read": true,
+   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+  },
+  "announce": {
+   ".read": true,
+   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+  },
+  "tads": {
+   ".read": true,
+   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+  },
+  "tads_pending": {
+   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   "$id": {
+    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()",
+    ".validate": "newData.hasChildren(['tid','title','at']) && newData.child('title').isString() && newData.child('title').val().length <= 150 && (!newData.child('desc').exists() || newData.child('desc').val().length <= 2000) && (!newData.child('img').exists() || newData.child('img').val().length <= 400000)"
+   }
+  },
+  "notifs": {
+   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   "$id": {
+    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()"
+   }
+  },
+  "boards": {
+   ".read": true,
+   ".write": true
+  },
+  "tconf": {
+   ".read": true,
+   ".write": true
+  },
+  "subs": {
+   ".read": true,
+   ".write": true
+  },
+  "wacamps": {
+   ".read": true,
+   ".write": true
+  },
+  "grades": {
+   ".read": true,
+   ".write": true
+  },
+  "hw": {
+   ".read": true,
+   ".write": true
+  },
+  "hwsub": {
+   ".read": true,
+   ".write": true
+  },
+  "ratings": {
+   ".read": true,
+   ".write": true
+  },
+  "quizzes": {
+   ".read": true,
+   ".write": true
+  },
+  "quizres": {
+   ".read": true,
+   ".write": true
+  },
+  "subhist": {
+   ".read": true,
+   ".write": true
+  },
+  "hw_templates": {
+   ".read": true,
+   ".write": true
+  },
+  "fcm": {
+   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   "$id": {
+    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()"
+   }
+  }
+ }
+}
