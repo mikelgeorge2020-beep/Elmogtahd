@@ -3,7 +3,7 @@
   "teachers": {
    ".read": true,
    "$id": {
-    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || (!data.exists() && newData.child('approved').val() === false)"
+    ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com' || (!data.exists() && newData.child('approved').val() === false)"
    }
   },
   "sessions": {
@@ -28,35 +28,35 @@
   },
   "payments": {
    ".read": true,
-   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+   ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'"
   },
   "settings": {
    ".read": true,
-   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+   ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'"
   },
   "adunits": {
    ".read": true,
-   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+   ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'"
   },
   "announce": {
    ".read": true,
-   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+   ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'"
   },
   "tads": {
    ".read": true,
-   ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'"
+   ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'"
   },
   "tads_pending": {
-   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   ".read": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'",
    "$id": {
-    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()",
+    ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com' || !data.exists()",
     ".validate": "newData.hasChildren(['tid','title','at']) && newData.child('title').isString() && newData.child('title').val().length <= 150 && (!newData.child('desc').exists() || newData.child('desc').val().length <= 2000) && (!newData.child('img').exists() || newData.child('img').val().length <= 400000)"
    }
   },
   "notifs": {
-   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   ".read": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'",
    "$id": {
-    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()"
+    ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com' || !data.exists()"
    }
   },
   "boards": {
@@ -108,9 +108,9 @@
    ".write": true
   },
   "fcm": {
-   ".read": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE'",
+   ".read": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com'",
    "$id": {
-    ".write": "auth != null && auth.token.email === 'ADMIN_EMAIL_HERE' || !data.exists()"
+    ".write": "auth != null && auth.token.email === 'mikelgeorge2020@gmail.com' || !data.exists()"
    }
   }
  }
